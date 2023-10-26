@@ -6,7 +6,7 @@ This project was made in order to complete a class goal. It was made under SCRUM
 
 Once you have cloned the repository and installed the correspondent depencies, you can just do
 
-bash```
+```bash
 npm run dev
 # or
 yarn dev
