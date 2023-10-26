@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body, :root {
+  height: 100%;
+  background-color: #E6E6E6;
+  background-image: url("/Textura1.png");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+label {
+  pointer-events: none;
+}
+
+.headerIcon {
+  padding: 10px;
+  color: #777C81;
+}
+@media (max-width: 800px) {
+  .headerIcon {
+    padding: 5px;
+  }
+}
+.headerIcon:hover {
+  color: #00426A;
+  cursor: pointer;
+}
+
+.headerSearchButton {
+  height: 35px;
+  width: 35px;
+  background-color: #00426A;
+  color: white;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+@media (max-width: 800px) {
+  .headerSearchButton {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+.headerSearchButton:hover {
+  background-color: #B86125;
+}
+
+.headerSearchInput {
+  height: 35px;
+  width: 400px;
+  border: 2px solid #00426A;
+  border-right: 0px;
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 5px;
+}
+@media (max-width: 800px) {
+  .headerSearchInput {
+    display: none;
+  }
+}
+.headerSearchInput:focus {
+  border: 2px solid #F7C46E;
+  outline: 0;
+}
+
+.navbar {
+  padding-top: 0px;
+  background-color: #00426A;
+}
+
+.navListItem {
+  color: white;
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+.navListItem:hover {
+  background-color: #B86125;
+  transition: 180ms ease-in;
+  cursor: pointer;
+}
+
+.carousel {
+  overflow: hidden;
+  height: 350px;
+}
+
+.carousel-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.hid {
+  display: none;
+}
+
+.carousel-next-btn, .carousel-prev-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.044);
+}
+.carousel-next-btn:hover, .carousel-prev-btn:hover {
+  transition: 150ms ease-in;
+  background-color: rgba(255, 255, 255, 0.333);
+}
+
+.carousel-next-btn {
+  right: 2%;
+}
+
+.carousel-prev-btn {
+  left: 2%;
+}
+
+.products-grid {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(6, auto);
+  gap: 15px;
+}
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(5, auto);
+    gap: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, auto);
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+  }
+}
+
+.product-card {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product-card:hover {
+  transition: 150ms ease-in;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #B86125;
+  transform: translateY(8px);
+  cursor: pointer;
+}
+.product-card:hover p {
+  color: white;
+}
+
+.product-img-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  height: 150px;
+}
+
+.product-img {
+  max-height: 100%;
+  background-color: red;
+}
+
+.products-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+.products-info p {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.product-price {
+  color: #00b353;
+  font-weight: 700;
+}
+
+.product-vendor {
+  font-size: 12px;
+  font-weight: 700;
+}/*# sourceMappingURL=globals.css.map */

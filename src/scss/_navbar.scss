@@ -1,0 +1,22 @@
+.navbar
+{
+    padding-top: 0px;
+    background-color: $blue-1;
+}
+
+.navListItem
+{
+    color: white;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    
+    &:hover
+    {
+        background-color: $orange-1;
+        transition: 180ms ease-in;
+        cursor: pointer;
+    }
+}
