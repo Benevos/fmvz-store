@@ -1,12 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from 'react-icons/md'
 
 function Carousel() 
 {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slideRef = useRef(null);
 
   const [sources, setSources] = useState([
     {img: 'https://picsum.photos/799/1300', title: 'Tarjeta 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
@@ -39,7 +42,7 @@ function Carousel()
 
           {sources.map((source, index) =>
           
-            <div key={index} className={`carousel-slide ${index === currentIndex ? 'active' : 'hid'}`}>
+            <div key={index} className={`carousel-slide ${index === currentIndex ? 'active-slide' : 'hidden-slide'}`}>
               <img src={source.img} alt="img" className="carousel-img-background"/>
               <img src={source.img} alt="img" className="carousel-img"/>
               <div className="slide-legend-container">
