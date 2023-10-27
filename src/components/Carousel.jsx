@@ -9,10 +9,9 @@ function Carousel()
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [sources, setSources] = useState([
-    'https://picsum.photos/1799/800',
-    'https://picsum.photos/1800/800',
-    'https://picsum.photos/1801/800',
-    'https://picsum.photos/1802/800'
+    {img: 'https://picsum.photos/1799/800', title: 'Tarjeta 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
+    {img: 'https://picsum.photos/1800/800', title: 'Tarjeta 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
+    {img: 'https://picsum.photos/1801/800', title: 'Tarjeta 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
   ]);
 
   const goToPrevSlide = () => 
@@ -41,13 +40,19 @@ function Carousel()
           {sources.map((source, index) =>
           
             <div key={index} className={`carousel-slide ${index === currentIndex ? 'active' : 'hid'}`}>
-              <img src={source} alt="img" className="carousel-img"/> 
+              <img src={source.img} alt="img" className="carousel-img"/>
+              <div className="slide-legend-container">
+                <div className="slide-legend">
+                  <label>{source.title}</label>
+                  <p>{source.description}</p>
+                </div>
+              </div>
             </div>
           )}
-          <button className="carousel-prev-btn" onClick={goToNextSlide}>
+          <button className="carousel-prev-btn" onClick={goToPrevSlide}>
             <MdOutlineArrowBackIosNew/>
           </button>
-          <button className="carousel-next-btn" onClick={goToPrevSlide}>
+          <button className="carousel-next-btn" onClick={goToNextSlide}>
             <MdOutlineArrowForwardIos/>
           </button>
         </div>

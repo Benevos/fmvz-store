@@ -24,7 +24,7 @@ function Products()
         <div className="mt-5 px-5">
 
             <div className="flex items-center justify-center py-2 rounded-md shadow-md bg-blueOne text-white">
-                <h2 className="font-light">✨ ¡Descubre! 🔍</h2>
+                <h2>✨ ¡Descubre! 🔍</h2>
             </div>
 
             <div className="products-grid">
