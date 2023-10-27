@@ -1,10 +1,15 @@
+.header
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .headerIcon
 {
     padding: 10px;
 
     color: $gray-2;
 
-    @media (max-width: 800px)
+    @media (max-width: 900px)
     {
         padding: 5px;
     }
@@ -29,7 +34,7 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 
-    @media (max-width: 800px)
+    @media (max-width: 900px)
     {
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
@@ -37,6 +42,7 @@
 
     &:hover
     {
+        transition: 150ms ease-in;
         background-color: $orange-1;
     }
 }
@@ -53,7 +59,7 @@
     border-bottom-right-radius: 0px;
     padding: 5px;
 
-    @media (max-width: 800px)
+    @media (max-width: 900px)
     {
         display: none;
     }

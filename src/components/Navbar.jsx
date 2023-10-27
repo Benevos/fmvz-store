@@ -5,16 +5,16 @@ function Navbar() {
     <nav className='navbar py-0'>
         <ul className='flex items-center justify-center h-full w-full mb-0 p-0'>
             <li className='navListItem'>
-                Categorias
+                📚 Categorias
             </li>
             <li className='navListItem'>
-                Ofertas
+                💯 Ofertas
             </li>
             <li className='navListItem'>
-                Tendencias
+                🔥 Tendencias
             </li>
             <li className='navListItem'>
-                Nuevos
+                ✨ Nuevos
             </li>
         </ul>
     </nav>

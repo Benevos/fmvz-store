@@ -11,7 +11,8 @@ function Carousel()
   const [sources, setSources] = useState([
     'https://picsum.photos/1799/800',
     'https://picsum.photos/1800/800',
-    'https://picsum.photos/1801/800'
+    'https://picsum.photos/1801/800',
+    'https://picsum.photos/1802/800'
   ]);
 
   const goToPrevSlide = () => 
@@ -34,7 +35,7 @@ function Carousel()
 
   return (
     <>
-      <div className="carousel" style={{backgroundImage: 'url('+sources[currentIndex]+')'}}>
+      <div className="carousel">
         <div className="carousel-slides">
 
           {sources.map((source, index) =>

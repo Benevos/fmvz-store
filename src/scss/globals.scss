@@ -7,4 +7,12 @@
 @import 'header';
 @import 'navbar';
 @import 'carousel';
-@import 'products-grid'
+@import 'products-grid';
+@import 'search-dialog';
+@import 'footer';
+
+.filler
+{
+    height: 96px;
+    width: 100%;
+}

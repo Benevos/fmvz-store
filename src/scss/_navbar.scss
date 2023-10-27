@@ -2,21 +2,40 @@
 {
     padding-top: 0px;
     background-color: $blue-1;
+    height: 40px;
 }
 
 .navListItem
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: white;
     height: 100%;
-    padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 7px;
     padding-left: 7px;
     
+
+    @media (max-width: 500px)
+    {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 380px)
+    {
+        font-size: 11px;
+    }
+
     &:hover
     {
-        background-color: $orange-1;
-        transition: 180ms ease-in;
+        color: $auxiliar-5;
+        font-weight: 900;
+        transform: translateY(5px);
+        transition: 200ms ease-in;
         cursor: pointer;
     }
 }

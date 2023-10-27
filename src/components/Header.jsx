@@ -12,15 +12,24 @@ import { IoMdSchool } from 'react-icons/io';
 
 function Header() 
 {
-    const normalIconColor = '#777c81';
+    const handleSearchDialogClick = () =>
+    {
+        const windowInnerWidth  = window.innerWidth;
+
+        if(windowInnerWidth <= 900)
+        {
+            const searchDialog = document.getElementById('searchDialog');
+            searchDialog.showModal();
+        }
+    }
 
     return (
-        <div className='w-full h-fit bg-white flex justify-around items-center'>
+        <div className='w-full h-24 bg-white flex justify-around items-center fixed z-50 header'>
             <Image priority className='h-auto w-auto py-2 px-2 max-md:w-32' src={'/uat.png'} height={150} width={150} alt='UAT'/>
 
             <div className='flex'>
                 <input className='headerSearchInput' placeholder='Hoy quiero buscar...'/>
-                <button className='headerSearchButton flex items-center justify-center'>
+                <button  onClick={handleSearchDialogClick} className='headerSearchButton flex items-center justify-center'>
                     <BiSearch/>
                 </button>
             </div>
