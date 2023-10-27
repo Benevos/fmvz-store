@@ -1,8 +1,8 @@
 import '../scss/globals.scss';
 
 export const metadata = {
-  title: 'PSBII - Benevos',
-  description: 'Listen to music',
+  title: 'Tienda UAT',
+  description: '#AquíComienzaTodo',
   icons: {
     icon: 'UAT-WIN.jpg'
   },
