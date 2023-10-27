@@ -15,7 +15,7 @@ export const metadata = {
     locale: 'es_MX',
     images: [
       {
-        url: 'https://fmvz-store.vercel.app/UAT-WIN.png',
+        url: 'https://fmvz-store.vercel.app/UAT-WIN.jpg',
         width: '800',
         height: '800',
         alt: 'uat-logo.png'
