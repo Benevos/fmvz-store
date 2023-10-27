@@ -17,17 +17,23 @@ function FooterTop() {
         <img className='footer-top-slogan' src='/slogan.svg'/>
 
         <div className='footer-top-social'>
-            <div className='footer-top-social-img-container'>
-            <SiFacebook className='footer-top-social-img'/>
-            </div>
+            <Link href={'/#'}>
+              <div className='footer-top-social-img-container'>
+                <SiFacebook className='footer-top-social-img'/>
+              </div>
+            </Link>
+
+            <Link href={'/#'}>
+              <div className='footer-top-social-img-container'>
+                <FaSquareXTwitter className='footer-top-social-img'/>
+              </div>
+            </Link>
             
-            <div className='footer-top-social-img-container'>
-            <FaSquareXTwitter className='footer-top-social-img'/>
-            </div>
-            
-            <div className='footer-top-social-img-container'>
-            <BsInstagram className='footer-top-social-img'/>
-            </div>
+            <Link href={'/#'}>
+              <div className='footer-top-social-img-container'>
+                <BsInstagram className='footer-top-social-img'/>
+              </div>
+            </Link>
         </div>
         </div>
     </div>

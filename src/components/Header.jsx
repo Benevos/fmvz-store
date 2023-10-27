@@ -26,7 +26,9 @@ function Header()
 
     return (
         <div className='w-full h-24 bg-white flex justify-around items-center fixed z-50 header'>
-            <Image priority className='h-auto w-auto py-2 px-2 max-md:w-32' src={'/uat.png'} height={150} width={150} alt='UAT'/>
+            <Link href={'/#'}>
+                <Image priority className='h-auto w-auto py-2 px-2 max-md:w-32' src={'/uat.png'} height={150} width={150} alt='UAT'/>
+            </Link>
 
             <div className='flex'>
                 <input className='headerSearchInput' placeholder='Hoy quiero buscar...'/>
