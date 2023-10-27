@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaEarthAmericas } from 'react-icons/fa6';
 import { FaUserCircle } from 'react-icons/fa';
 import { RiBillFill } from 'react-icons/ri';
@@ -35,29 +36,41 @@ function Header()
             </div>
 
             <div className='flex'>
-                <div className='headerIcon'>
-                    <LuMail size={18}/>
-                </div>
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <LuMail size={18}/>
+                    </div>
+                </Link>
 
-                <div className='headerIcon'>
-                    <MdOutlineCalendarMonth size={18}/>
-                </div>
-                
-                <div className='headerIcon'>
-                    <RiBillFill size={18}/>
-                </div>
-                
-                <div className='headerIcon'>
-                    <FaEarthAmericas size={18}/>
-                </div>
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <MdOutlineCalendarMonth size={18}/>
+                    </div>
+                </Link>
 
-                <div className='headerIcon'>
-                    <IoMdSchool size={18}/>
-                </div>
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <RiBillFill size={18}/>
+                    </div>
+                </Link>
 
-                <div className='headerIcon'>
-                    <FaUserCircle size={18}/>
-                </div>
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <FaEarthAmericas size={18}/>
+                    </div>
+                </Link>
+
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <IoMdSchool size={18}/>
+                    </div>
+                </Link>
+
+                <Link href={'/#'}>
+                    <div className='headerIcon'>
+                        <FaUserCircle size={18}/>
+                    </div>
+                </Link>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { v4 } from 'uuid';
 
@@ -30,17 +31,20 @@ function Products()
             <div className="products-grid">
             
             {products.map(product =>
-                <div key={v4()} className='product-card'>
-                    <div className='product-img-container'>
-                        <img className='product-img' src={product.thumbnail}/>
+                <Link href={'/products/'+product.id} key={v4()}>
+                    <div className='product-card'>
+                        <div className='product-img-container'>
+                            <img className='product-img' src={product.thumbnail}/>
+                        </div>
+                        
+                        <div className='products-info'>
+                            <p className='font-semibold'>{product.title.slice(0, 30) + `${product.title.length > 50 ? '...' : ''}`}</p>
+                            <p>{product.description.slice(0, 50) + `${product.description.length > 50 ? '...' : ''}`}</p>
+                            <label className='product-price'>{'💵' + product.price}</label>
+                            <label className='product-vendor'>{product.brand}</label>
+                        </div>
                     </div>
-                    
-                    <div className='products-info'>
-                        <p>{product.description.slice(0, 50) + `${product.description.length > 50 ? '...' : ''}`}</p>
-                        <label className='product-price'>{'💵' + product.price}</label>
-                        <label className='product-vendor'>{product.brand}</label>
-                    </div>
-                </div>
+                </Link>
             )}
 
             </div>
