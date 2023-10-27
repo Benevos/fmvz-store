@@ -9,9 +9,9 @@ function Carousel()
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [sources, setSources] = useState([
-    {img: 'https://picsum.photos/1799/800', title: 'Tarjeta 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
-    {img: 'https://picsum.photos/1800/800', title: 'Tarjeta 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
-    {img: 'https://picsum.photos/1801/800', title: 'Tarjeta 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
+    {img: 'https://picsum.photos/799/1300', title: 'Tarjeta 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
+    {img: 'https://picsum.photos/800/800', title: 'Tarjeta 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
+    {img: 'https://picsum.photos/1500/800', title: 'Tarjeta 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus est excepturi illum rem libero fugit porro! Vel fugiat maiores accusamus corporis iste eum iusto corrupti soluta amet, enim deleniti'},
   ]);
 
   const goToPrevSlide = () => 
@@ -40,6 +40,7 @@ function Carousel()
           {sources.map((source, index) =>
           
             <div key={index} className={`carousel-slide ${index === currentIndex ? 'active' : 'hid'}`}>
+              <img src={source.img} alt="img" className="carousel-img-background"/>
               <img src={source.img} alt="img" className="carousel-img"/>
               <div className="slide-legend-container">
                 <div className="slide-legend">
