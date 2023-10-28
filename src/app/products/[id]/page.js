@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
 import SearchDialog from '@/components/SearchDialog';
@@ -19,6 +20,7 @@ async function Product({ params })
             <TopFiller/>
             <Navbar/>
             <SingleProduct product={product}/>
+            <Footer/>
         </div>
     )
 }
