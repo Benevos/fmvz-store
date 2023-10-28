@@ -24,7 +24,7 @@
     }
 }
 
-.product-card
+.products-grid-card
 {
     border-radius: 8px;
     background-color: white;
@@ -52,7 +52,7 @@
     
 }
 
-.product-img-container
+.products-grid-img-container
 {
     background-color: white;
 
@@ -66,13 +66,13 @@
     height: 150px;
 }
 
-.product-img
+.products-grid-img
 {
     max-height: 100%;
     background-color: red;
 }
 
-.products-info
+.products-grid-info
 {   
     display: flex;
     flex-direction: column;
@@ -88,13 +88,13 @@
     }
 }
 
-.product-price
+.products-grid-price
 {
     color: #00b353;
     font-weight: 700;
 }
 
-.product-vendor
+.products-grid-vendor
 {
     font-size: 12px;
     font-weight: 700;

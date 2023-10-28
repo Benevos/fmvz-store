@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { v4 } from 'uuid';
 
-function Products() 
+function ProductsGrid() 
 {
     const [products, setProducts] = useState([]);
     
@@ -32,16 +32,16 @@ function Products()
             
             {products.map(product =>
                 <Link href={'/products/'+product.id} key={v4()}>
-                    <div className='product-card'>
-                        <div className='product-img-container'>
-                            <img className='product-img' src={product.thumbnail}/>
+                    <div className='products-grid-card'>
+                        <div className='products-grid-img-container'>
+                            <img className='products-grid-img' src={product.thumbnail}/>
                         </div>
                         
-                        <div className='products-info'>
+                        <div className='products-grid-info'>
                             <p className='font-semibold'>{product.title.slice(0, 30) + `${product.title.length > 50 ? '...' : ''}`}</p>
                             <p>{product.description.slice(0, 50) + `${product.description.length > 50 ? '...' : ''}`}</p>
-                            <label className='product-price'>{'💵' + product.price}</label>
-                            <label className='product-vendor'>{product.brand}</label>
+                            <label className='products-grid-price'>💵 {product.discountPercentage <= 0 ? product.price : (product.price - (product.price * product.discountPercentage / 100)).toFixed(2)}</label>
+                            <label className='products-grid-vendor'>{product.brand}</label>
                         </div>
                     </div>
                 </Link>
@@ -53,4 +53,4 @@ function Products()
     )
 }
 
-export default Products
+export default ProductsGrid

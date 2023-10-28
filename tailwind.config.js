@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         'blueOne': '#00426A',
-        'auxiliarFive': '#F7C46E'
+        'auxiliarFive': '#F7C46E',
+        'greemOne': '#00b353'
       }
     },
   },
