@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaEarthAmericas } from 'react-icons/fa6';
@@ -10,9 +10,13 @@ import { MdOutlineCalendarMonth } from 'react-icons/md';
 import { LuMail } from 'react-icons/lu';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdSchool } from 'react-icons/io';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '@/scripts/firebase';
 
 function Header() 
 {
+    const [user, setUser] = useState(null);
+
     const handleSearchDialogClick = () =>
     {
         const windowInnerWidth  = window.innerWidth;
@@ -23,6 +27,16 @@ function Header()
             searchDialog.showModal();
         }
     }
+
+    useEffect(() =>
+    {
+        const unsubscribe = onAuthStateChanged(auth, currentUser =>
+        {
+            setUser(currentUser);
+        })
+
+        return () => unsubscribe();
+    }, []);
 
     return (
         <div className='w-full h-24 bg-white flex justify-around items-center fixed z-50 header'>
@@ -68,7 +82,7 @@ function Header()
                     </div>
                 </Link>
 
-                <Link href={'/#'}>
+                <Link href={!user ? '/login' : '/user/'+user.email}>
                     <div className='headerIcon'>
                         <FaUserCircle size={18}/>
                     </div>

@@ -1,0 +1,30 @@
+.user-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100dvh - 157px);    
+}
+
+.user
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button
+    {
+        margin-top: 10px;
+        background-color: red;
+        color: white;
+        border-radius: 4px;
+        padding: 10px;
+
+        &:hover
+        {
+            transition: 150ms ease-in;
+            font-weight: 700;
+            background-color: rgb(255, 155, 155);
+        }
+    }
+}

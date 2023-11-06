@@ -11,9 +11,11 @@
 @import 'search-dialog';
 @import 'footer';
 @import 'single-product';
+@import 'login';
+@import 'user';
 
 .filler
 {
-    height: 96px;
+    height: $filler-height;
     width: 100%;
 }
