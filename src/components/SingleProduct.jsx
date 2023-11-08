@@ -3,7 +3,7 @@
 import React from 'react';
 import ProductImageSelector from './ProductImageSelector';
 import ProductStars from './ProductStars';
-import BuyButtonPlaceholder from './BuyButtonPlaceholder';
+import PayPalButton from './PayPalButton';
 
 function SingleProduct({ product }) 
 {
@@ -34,7 +34,9 @@ function SingleProduct({ product })
                         <p className='mt-4'>{product.description}</p>
                     </div>
 
-                    <BuyButtonPlaceholder/>
+                    <div className='flex items-center justify-center flex-col mt-6'>
+                        <PayPalButton amount={product.discountPercentage <= 0 ? product.price : (product.price - (product.price * product.discountPercentage / 100)).toFixed(2)}/>
+                    </div>
                 </div>
             
             </div>

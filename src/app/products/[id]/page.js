@@ -11,8 +11,6 @@ async function Product({ params })
     const res = await fetch('https://dummyjson.com/products/'+params.id);
     const product = await res.json();
 
-    console.log(product)
-
     return (
         <div>
             <SearchDialog/>
