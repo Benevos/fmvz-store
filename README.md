@@ -2,6 +2,8 @@
 
 This project was made in order to complete a class goal. It was made under SCRUM development method to learn about it. You can visit the live page in this link https://fmvz-store.vercel.app/
 
+This IS NOT an official site of the institutiion whose logotypes are displayed.
+
 ## Dependencies
 
 In addition to default React dependencies, you will also need:
