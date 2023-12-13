@@ -1,6 +1,6 @@
 # About the project
 
-This project was made in order to complete a class goal. It was made under SCRUM development method to learn about it.
+This project was made in order to complete a class goal. It was made under SCRUM development method to learn about it. You can visit the live page in this link https://fmvz-store.vercel.app/
 
 ## Dependencies
 
@@ -11,6 +11,7 @@ npm install react-icons
 npm install react-responsive-carousel # This is not used, but may be on future
 npm install sass
 npm intall uuidv4
+npm install @paypal/react-paypal-js
 ```
 
 To see all the dependencies, look at the `package.json`
